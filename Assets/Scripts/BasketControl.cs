@@ -20,7 +20,8 @@ public class BasketControl : MonoBehaviour
     private Vector2 startPos;
     private bool positionReturn = false;
 
-    private FaceBasket playerControl;
+    //private FaceBasket playerControl;
+    private PlayerAnimation playerAnim;
 
 
     // Start is called before the first frame update
@@ -41,7 +42,8 @@ public class BasketControl : MonoBehaviour
         }
         GameObject.Find("Score").GetComponent<Text>().text = "0";
 
-        playerControl = GameObject.FindObjectOfType<FaceBasket>();
+        //playerControl = GameObject.FindObjectOfType<FaceBasket>();
+        playerAnim = GameObject.FindObjectOfType<PlayerAnimation>();
     }
 
     // Update is called once per frame
@@ -54,7 +56,8 @@ public class BasketControl : MonoBehaviour
             {
                 transform.position = startPos;
                 positionReturn = true;
-                playerControl.SetIdle();
+                //playerControl.SetIdle();
+                playerAnim.ChangeAnimation(0);
             }
             return;
         }
@@ -77,7 +80,8 @@ public class BasketControl : MonoBehaviour
                     if (catchPositions[i].Item1.OverlapPoint(realPos))
                     {
                         transform.position = catchPositions[i].Item2;
-                        playerControl.ChangeRotation(transform.position);
+                        //playerControl.ChangeRotation(transform.position);
+                        playerAnim.ChangeAnimation(i+1);
                         break;
                     }
                 }
@@ -93,7 +97,8 @@ public class BasketControl : MonoBehaviour
             {
                 transform.position = startPos;
                 positionReturn = true;
-                playerControl.SetIdle();
+                //playerControl.SetIdle();
+                playerAnim.ChangeAnimation(0);
             }
             return;
         }
@@ -109,7 +114,8 @@ public class BasketControl : MonoBehaviour
                 if (catchPositions[i].Item1.bounds.Contains(realPos))
                 {
                     transform.position = catchPositions[i].Item2 - new Vector2(1, 1);
-                    playerControl.ChangeRotation(transform.position);
+                    //playerControl.ChangeRotation(transform.position);
+                    playerAnim.ChangeAnimation(i + 1);
                     break;
                 }
             }
@@ -125,7 +131,8 @@ public class BasketControl : MonoBehaviour
             {
                 transform.position = startPos;
                 positionReturn = true;
-                playerControl.SetIdle();
+                //playerControl.SetIdle();
+                playerAnim.ChangeAnimation(0);
             }
             return;
         }
