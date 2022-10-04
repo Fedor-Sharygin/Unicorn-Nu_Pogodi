@@ -21,11 +21,16 @@ public class CupcakeMovement : MonoBehaviour
 
     private bool move = true;
 
+
+    [SerializeField] private List<Sprite> cupcakeSprites;
+
+
     // Start is called before the first frame update
-    //    void Start()
-    //    {
-    //        
-    //    }
+    void Start()
+    {
+        int randIdx = Random.Range(0, cupcakeSprites.Count);
+        GetComponent<SpriteRenderer>().sprite = cupcakeSprites[randIdx];
+    }
 
     // Update is called once per frame
     void Update()
