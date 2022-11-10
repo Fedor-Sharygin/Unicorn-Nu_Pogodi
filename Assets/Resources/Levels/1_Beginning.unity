@@ -182,6 +182,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 4}
   m_EdgeRadius: 0
+--- !u!4 &260807573 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8432474288871409655, guid: 304ef7fa3b0833f469689b9b306d3ab0, type: 3}
+  m_PrefabInstance: {fileID: 7862413896557243447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &283628792 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7862413896874855591, guid: 304ef7fa3b0833f469689b9b306d3ab0, type: 3}
+  m_PrefabInstance: {fileID: 7862413896557243447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &374306053
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,6 +751,70 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_TouchBoxes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_TouchBoxes.Array.data[0]
+      value: 
+      objectReference: {fileID: 283628792}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_TouchBoxes.Array.data[1]
+      value: 
+      objectReference: {fileID: 374306055}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_TouchBoxes.Array.data[2]
+      value: 
+      objectReference: {fileID: 527552352}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_TouchBoxes.Array.data[3]
+      value: 
+      objectReference: {fileID: 186075869}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_AnimationIndex.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_CatchPositions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_AnimationIndex.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_AnimationIndex.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_AnimationIndex.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_AnimationIndex.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_CatchPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 260807573}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_CatchPositions.Array.data[1]
+      value: 
+      objectReference: {fileID: 1370391764}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_CatchPositions.Array.data[2]
+      value: 
+      objectReference: {fileID: 1822640502}
+    - target: {fileID: 4955487612875670533, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
+      propertyPath: m_CatchPositions.Array.data[3]
+      value: 
+      objectReference: {fileID: 461338447}
     - target: {fileID: 5615881986344809894, guid: c89bbbde2ef751b4f9a09985df33cdaa, type: 3}
       propertyPath: m_Name
       value: Basket
@@ -1745,7 +1819,7 @@ MonoBehaviour:
   - unicorn_top_left
   - unicorn_bot_left
   - unicorn_top_right
-  - unicotn_bot_right
+  - unicorn_bot_right
 --- !u!95 &8066355114987137287
 Animator:
   serializedVersion: 3

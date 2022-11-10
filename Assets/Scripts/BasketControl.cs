@@ -10,7 +10,10 @@ public class BasketControl : MonoBehaviour
     private const float timeUntilIdle = 3.0f;
     private float curPosTime = 0.0f;
 
-    private List<Tuple<BoxCollider2D, Vector2>> catchPositions;
+
+    [SerializeField]  private List<BoxCollider2D> m_TouchBoxes;
+    [SerializeField]  private List<Transform> m_CatchPositions;
+    [SerializeField]  private List<int> m_AnimationIndex;
 
     private CupcakeManager cupcakeManager;
 
@@ -32,7 +35,7 @@ public class BasketControl : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
         GameObject[] touchAreas = GameObject.FindGameObjectsWithTag("TouchArea");
 
-        catchPositions = new List<Tuple<BoxCollider2D, Vector2>>(touchAreas.Length);
+        /*catchPositions = new List<Tuple<BoxCollider2D, Vector2>>(touchAreas.Length);
         for (int i = 0; i < touchAreas.Length; ++i)
         {
             catchPositions.Add(new Tuple<BoxCollider2D, Vector2>(
@@ -40,7 +43,7 @@ public class BasketControl : MonoBehaviour
                 touchAreas[i].transform.GetChild(1).transform.position)
             );
         }
-        GameObject.Find("Score").GetComponent<Text>().text = "0";
+        GameObject.Find("Score").GetComponent<Text>().text = "0";*/
 
         //playerControl = GameObject.FindObjectOfType<FaceBasket>();
         playerAnim = GameObject.FindObjectOfType<PlayerAnimation>();
@@ -75,13 +78,13 @@ public class BasketControl : MonoBehaviour
                 var mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 var realPos = new Vector2(mouseWorldPos.x, mouseWorldPos.y);
 
-                for (int i = 0; i < catchPositions.Count; ++i)
+                for (int i = 0; i < m_TouchBoxes.Count; ++i)
                 {
-                    if (catchPositions[i].Item1.OverlapPoint(realPos))
+                    if (m_TouchBoxes[i].OverlapPoint(realPos))
                     {
-                        transform.position = catchPositions[i].Item2;
+                        transform.position = m_CatchPositions[i].position;
                         //playerControl.ChangeRotation(transform.position);
-                        playerAnim.ChangeAnimation(i+1);
+                        playerAnim.ChangeAnimation(m_AnimationIndex[i]);
                         break;
                     }
                 }
@@ -109,13 +112,13 @@ public class BasketControl : MonoBehaviour
             var mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             var realPos = new Vector2(mouseWorldPos.x, mouseWorldPos.y);
 
-            for (int i = 0; i < catchPositions.Count; ++i)
+            for (int i = 0; i < m_TouchBoxes.Count; ++i)
             {
-                if (catchPositions[i].Item1.bounds.Contains(realPos))
+                if (m_TouchBoxes[i].OverlapPoint(realPos))
                 {
-                    transform.position = catchPositions[i].Item2 - new Vector2(1, 1);
+                    transform.position = m_CatchPositions[i].position;
                     //playerControl.ChangeRotation(transform.position);
-                    playerAnim.ChangeAnimation(i + 1);
+                    playerAnim.ChangeAnimation(m_AnimationIndex[i]);
                     break;
                 }
             }
