@@ -194,5 +194,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be1c1f23ea2b664686cdcb72ff009d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cupcakeSprites:
+  - {fileID: 3698028317399831782, guid: 49b82a60a615b5a4cb91effcde109699, type: 3}
+  - {fileID: -3210149256749087235, guid: 49b82a60a615b5a4cb91effcde109699, type: 3}
+  - {fileID: -7280360292507975879, guid: 49b82a60a615b5a4cb91effcde109699, type: 3}
+  - {fileID: -5298874578078061209, guid: 49b82a60a615b5a4cb91effcde109699, type: 3}
   cupcakePrefab: {fileID: 6198484786188144205, guid: 42e3f92485314b04ebb8da3daa381653, type: 3}
   isRoute: 0
