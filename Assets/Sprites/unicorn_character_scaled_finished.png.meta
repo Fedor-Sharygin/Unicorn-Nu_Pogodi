@@ -1,0 +1,565 @@
+fileFormatVersion: 2
+guid: 434ee04d7d3213e46940cb3fd202f869
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6095612983621101781
+    second: unicorn_character_scaled_finished_0
+  - first:
+      213: 88849340999867946
+    second: unicorn_character_scaled_finished_1
+  - first:
+      213: -8908099496411160085
+    second: unicorn_character_scaled_finished_2
+  - first:
+      213: -5244747674524456302
+    second: unicorn_character_scaled_finished_3
+  - first:
+      213: 8740082070576609658
+    second: unicorn_character_scaled_finished_4
+  - first:
+      213: -405836456385284764
+    second: unicorn_character_scaled_finished_5
+  - first:
+      213: -7496356544124760526
+    second: unicorn_character_scaled_finished_6
+  - first:
+      213: 1545532818265454048
+    second: unicorn_character_scaled_finished_7
+  - first:
+      213: 6320080882422005049
+    second: unicorn_character_scaled_finished_8
+  - first:
+      213: 5703273335004399808
+    second: unicorn_character_scaled_finished_9
+  - first:
+      213: 6686736484061107666
+    second: unicorn_character_scaled_finished_10
+  - first:
+      213: -2308799002577075646
+    second: unicorn_character_scaled_finished_11
+  - first:
+      213: 5676090448131353622
+    second: unicorn_character_scaled_finished_12
+  - first:
+      213: -3716131557333811942
+    second: unicorn_character_scaled_finished_13
+  - first:
+      213: -6078677446653744658
+    second: unicorn_character_scaled_finished_14
+  - first:
+      213: -2773225763681457363
+    second: unicorn_character_scaled_finished_15
+  - first:
+      213: 1745368917119292148
+    second: unicorn_character_scaled_finished_16
+  - first:
+      213: -822687648232282158
+    second: unicorn_character_scaled_finished_17
+  - first:
+      213: -1544528355859091698
+    second: unicorn_character_scaled_finished_18
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_0
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 4381
+        width: 390
+        height: 695
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27510f8948086ba0800000000000000
+      internalID: -6095612983621101781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_1
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 4381
+        width: 390
+        height: 695
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e13d04108ab3100800000000000000
+      internalID: 88849340999867946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_2
+      rect:
+        serializedVersion: 2
+        x: 2382
+        y: 4381
+        width: 390
+        height: 678
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1a39484b2106480800000000000000
+      internalID: -8908099496411160085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_3
+      rect:
+        serializedVersion: 2
+        x: 3405
+        y: 4381
+        width: 390
+        height: 678
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ae96327c9e637b0800000000000000
+      internalID: -5244747674524456302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_4
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 3356
+        width: 502
+        height: 728
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79ba7416520b4970800000000000000
+      internalID: 8740082070576609658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_5
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 3356
+        width: 517
+        height: 743
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4657044a4ed2e5af0800000000000000
+      internalID: -405836456385284764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_6
+      rect:
+        serializedVersion: 2
+        x: 2269
+        y: 3356
+        width: 518
+        height: 743
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ec4c5c07797f790800000000000000
+      internalID: -7496356544124760526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_7
+      rect:
+        serializedVersion: 2
+        x: 3310
+        y: 3356
+        width: 517
+        height: 743
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5bb6dd8e5d27510800000000000000
+      internalID: 1545532818265454048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_8
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 2334
+        width: 647
+        height: 550
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d308cc31075b750800000000000000
+      internalID: 6320080882422005049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_9
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 2334
+        width: 647
+        height: 532
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c805e581e8162f40800000000000000
+      internalID: 5703273335004399808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_10
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 2334
+        width: 645
+        height: 532
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d55b17876f0ccc50800000000000000
+      internalID: 6686736484061107666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_11
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 2334
+        width: 677
+        height: 532
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2420e992a8f75ffd0800000000000000
+      internalID: -2308799002577075646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_12
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1309
+        width: 677
+        height: 550
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c6bd9703685ce40800000000000000
+      internalID: 5676090448131353622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_13
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1309
+        width: 470
+        height: 710
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1dbf7a9906ad6cc0800000000000000
+      internalID: -3716131557333811942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_14
+      rect:
+        serializedVersion: 2
+        x: 2222
+        y: 1309
+        width: 452
+        height: 695
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee96608811334aba0800000000000000
+      internalID: -6078677446653744658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_15
+      rect:
+        serializedVersion: 2
+        x: 3245
+        y: 1309
+        width: 470
+        height: 695
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b2ec17cd58389d0800000000000000
+      internalID: -2773225763681457363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_16
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 284
+        width: 646
+        height: 552
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f257e268cbc83810800000000000000
+      internalID: 1745368917119292148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unicorn_character_scaled_finished_17
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 284
+        width: 647
+        height: 552
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7630651f93594f0800000000000000
+      internalID: -822687648232282158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

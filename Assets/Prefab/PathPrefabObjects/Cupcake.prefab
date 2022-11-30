@@ -47,6 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cupcakeScore: 10
+  cupcakeSprites:
+  - {fileID: 3698028317399831782, guid: 49b82a60a615b5a4cb91effcde109699, type: 3}
+  - {fileID: -3210149256749087235, guid: 49b82a60a615b5a4cb91effcde109699, type: 3}
+  - {fileID: -7280360292507975879, guid: 49b82a60a615b5a4cb91effcde109699, type: 3}
+  - {fileID: -5298874578078061209, guid: 49b82a60a615b5a4cb91effcde109699, type: 3}
 --- !u!50 &7385829241601451599
 Rigidbody2D:
   serializedVersion: 4

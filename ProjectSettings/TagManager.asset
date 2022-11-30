@@ -9,6 +9,7 @@ TagManager:
   - Cupcake
   - Point
   - TouchArea
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3198322635
+    locked: 0
+  - name: Background
+    uniqueID: 2031908483
     locked: 0
