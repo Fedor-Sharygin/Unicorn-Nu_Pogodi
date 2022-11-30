@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private BasketControl bc;
     [SerializeField] private SpawnCupcake[] scs;
+    [SerializeField] private DifficultyManager dmgr;
 
     private float seconds = 0;
     private int minutes = 0;
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
             scs[i].MyStart();
         }
         bc.MyStart();
+        dmgr.MyStart();
         time = GameObject.Find("Time").GetComponent<Text>();
         time.text = "00:00";
     }

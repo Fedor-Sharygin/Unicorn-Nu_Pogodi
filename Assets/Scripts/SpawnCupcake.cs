@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,10 +10,10 @@ public class SpawnCupcake : MonoBehaviour
     private Vector2 startPoint, endPoint;
     private Route route;
 
-    public List<GameObject> cupcakesOnLine { get; } = new List<GameObject>(3); /// temporary number
-    private int curCupcakeNumber = 0;
-    private float spawnDelay = 2, curDelay = 0;
-    private float timeToFall = 10, fallSpeed = .2f;
+    public List<GameObject> cupcakesOnLine { get; } = new List<GameObject>(5); /// temporary number
+    private float minTimeToFall, maxTimeToFall;
+    private float minFallSpeed, maxFallSpeed;
+    private float healProb;
 
     private LifeController lifeController;
 
@@ -38,15 +38,6 @@ public class SpawnCupcake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (curDelay <= 0)
-        {
-            //CreateCupcake();
-        }
-        else
-        {
-            curDelay -= Time.deltaTime;
-        }
-
         for (int i = 0; i < cupcakesOnLine.Count; ++i)
         {
             GameObject cup = cupcakesOnLine[i];
@@ -63,29 +54,40 @@ public class SpawnCupcake : MonoBehaviour
 
     public bool CreateCupcake()
     {
-        //if (curDelay <= 0)
-        //{
-            for (int i = 0; i < cupcakesOnLine.Capacity; ++i)
+        for (int i = 0; i < cupcakesOnLine.Capacity; ++i)
+        {
+            if (i == cupcakesOnLine.Count)
             {
-                if (i == cupcakesOnLine.Count)
+                cupcakesOnLine.Add(Instantiate(cupcakePrefab, startPoint, Quaternion.identity));
+                CupcakeMovement cpm = cupcakesOnLine[i].GetComponent<CupcakeMovement>();
+                if (lifeController.m_healMe && Random.Range(0f, 1f) < healProb)
                 {
-                    cupcakesOnLine.Add(Instantiate(cupcakePrefab, startPoint, Quaternion.identity));
-                    CupcakeMovement cpm = cupcakesOnLine[i].GetComponent<CupcakeMovement>();
-                    if (isRoute)
-                    {
-                        cpm.SetPath(route);
-                        cpm.SetPathSpeed(fallSpeed);
-                    }
-                    else
-                    {
-                        cpm.SetPath(startPoint, endPoint);
-                        cpm.SetFallTime(timeToFall);
-                    }
-                    curDelay = spawnDelay;
-                    return true;
+                    /// if the cupcake is to be a healer
+                    /// set it as such and activate the glow
+                    /// 
+                    /// SpriteGlow namespace is from SpriteGlow package found at:
+                    /// https://github.com/Elringus/SpriteGlow
+                    cpm.SetHealer();
+                    cpm.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
                 }
+                if (isRoute)
+                {
+                    cpm.SetPath(route);
+                    cpm.SetPathSpeed(cupcakesOnLine.Count == 1 ?
+                        Random.Range(minFallSpeed, maxFallSpeed) :
+                        cupcakesOnLine[i - 1].GetComponent<CupcakeMovement>().GetPathSpeed());
+                }
+                else
+                {
+                    cpm.SetPath(startPoint, endPoint);
+                    cpm.SetFallTime(cupcakesOnLine.Count == 1 ?
+                        Random.Range(minTimeToFall, maxTimeToFall) :
+                        cupcakesOnLine[i-1].GetComponent<CupcakeMovement>().GetFallTime());
+                }
+                cpm.Activate();
+                return true;
             }
-        //}
+        }
         return false;
     }
 
@@ -111,5 +113,19 @@ public class SpawnCupcake : MonoBehaviour
     public Vector2 GetEndPos()
     {
         return endPoint;
+    }
+
+    public void SetVelocityRange(float n_minVel, float n_maxVel)
+    {
+        minFallSpeed = n_minVel; maxFallSpeed = n_maxVel;
+    }
+    public void SetFallTimeRange(float n_minTime, float n_maxTime)
+    {
+        minTimeToFall = n_minTime; maxTimeToFall = n_maxTime;
+    }
+
+    public void SetHealCupcakeProb(float n_healProb)
+    {
+        healProb = n_healProb;
     }
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,6 +43,7 @@ public class CupcakeManager : MonoBehaviour
         }
     }
 
+
     public bool DestroyCupcake(GameObject cupcake)
     {
         for (int i = 0; i < cupcakeSpawners.Length; ++i)
@@ -52,4 +53,29 @@ public class CupcakeManager : MonoBehaviour
         }
         return false;
     }
+
+    /// setters of cupcake movement
+    public void SetDelayRange(float nminDelay, float nmaxDelay)
+    {
+        minDelay = nminDelay; maxDelay = nmaxDelay;
+    }
+
+    public void SetVelocityRange(float n_minVel, float n_maxVel)
+    {
+        for (int i = 0; i < cupcakeSpawners.Length; ++i)
+            cupcakeSpawners[i].SetVelocityRange(n_minVel, n_maxVel);
+    }
+
+    public void SetTravelTimeRange(float n_minTime, float n_maxTime)
+    {
+        for (int i = 0; i < cupcakeSpawners.Length; ++i)
+            cupcakeSpawners[i].SetFallTimeRange(n_minTime, n_maxTime);
+    }
+
+    public void SetHealCupcakeProb(float n_healProb)
+    {
+        for (int i = 0; i < cupcakeSpawners.Length; ++i)
+            cupcakeSpawners[i].SetHealCupcakeProb(n_healProb);
+    }
 }
+

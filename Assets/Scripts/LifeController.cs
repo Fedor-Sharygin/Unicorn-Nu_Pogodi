@@ -9,6 +9,8 @@ public class LifeController : MonoBehaviour
     private Image[] lives;
     private int curLife;
 
+    public bool m_healMe = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,11 +38,24 @@ public class LifeController : MonoBehaviour
             /// make the picture of life red and transparent
             lives[curLife].color = new Vector4(1, 0, 0, 0.23f);
             --curLife;
+            m_healMe = true;
         }
         
         if (curLife == -1)
         {
             GameObject.FindObjectOfType<GameManager>().gameEnd = true;
+        }
+    }
+
+    public void GetHealed()
+    {
+        if (curLife < lives.Length-1)
+        {
+            ++curLife;
+            /// restore the original color
+            lives[curLife].color = new Vector4(1f,1f,1f,1f);
+            if (curLife == lives.Length-1)
+                m_healMe = false;
         }
     }
 }
