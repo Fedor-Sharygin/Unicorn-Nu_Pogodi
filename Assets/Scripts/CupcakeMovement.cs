@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,11 +19,12 @@ public class CupcakeMovement : MonoBehaviour
     private float tParam;
 
 
-    private bool move = true;
+    private bool move = false;
 
 
     [SerializeField] private List<Sprite> cupcakeSprites;
 
+    private bool healer = false;
 
     // Start is called before the first frame update
     void Start()
@@ -100,27 +101,10 @@ public class CupcakeMovement : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            /*
-            if (transform.position.y < -6)
-            {
-                Destroy(gameObject);
-            }    
-            */
-        }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-    }
-
 
     
     /// Setters used by SpawnCupcake in order to set cupcake parameters
-    
-
     public void SetPath(Vector2 nStart, Vector2 nEnd)
     {
         isRoute = false;
@@ -129,6 +113,10 @@ public class CupcakeMovement : MonoBehaviour
     public void SetFallTime(float nTime)
     {
         timeToDescend = nTime;
+    }
+    public float GetFallTime()
+    {
+        return timeToDescend;
     }
 
 
@@ -143,10 +131,25 @@ public class CupcakeMovement : MonoBehaviour
     {
         descentSpeed = nSpeed;
     }
+    public float GetPathSpeed()
+    {
+        return descentSpeed;
+    }
+
+    public void SetHealer()
+    {
+        healer = true;
+    }
+
+    public bool GetHealer()
+    {
+        return healer;
+    }
+
+
+    public void Activate()
+    {
+        move = true;
+    }
+
 }
-
-
-/// Testing start and end position
-///UnityEditor.TransformWorldPlacementJSON:{ "position":{ "x":-11.722813606262207,"y":3.0458598136901857,"z":0.0},"rotation":{ "x":0.0,"y":0.0,"z":-0.13052624464035035,"w":0.9914448857307434},"scale":{ "x":1.0,"y":1.0,"z":1.0} }
-///UnityEditor.TransformWorldPlacementJSON:{"position":{"x":-1.6771860122680665,"y":0.35414040088653567,"z":0.0},"rotation":{"x":0.0,"y":0.0,"z":-0.13052624464035035,"w":0.9914448857307434},"scale":{"x":1.0,"y":1.0,"z":1.0}}
-

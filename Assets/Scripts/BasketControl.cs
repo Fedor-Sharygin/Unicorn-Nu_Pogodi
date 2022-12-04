@@ -35,17 +35,7 @@ public class BasketControl : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
         GameObject[] touchAreas = GameObject.FindGameObjectsWithTag("TouchArea");
 
-        /*catchPositions = new List<Tuple<BoxCollider2D, Vector2>>(touchAreas.Length);
-        for (int i = 0; i < touchAreas.Length; ++i)
-        {
-            catchPositions.Add(new Tuple<BoxCollider2D, Vector2>(
-                touchAreas[i].GetComponent<BoxCollider2D>(),
-                touchAreas[i].transform.GetChild(1).transform.position)
-            );
-        }
-        GameObject.Find("Score").GetComponent<Text>().text = "0";*/
-
-        //playerControl = GameObject.FindObjectOfType<FaceBasket>();
+        GameObject.Find("Score").GetComponent<Text>().text = "0";
         playerAnim = GameObject.FindObjectOfType<PlayerAnimation>();
     }
 
@@ -147,6 +137,8 @@ public class BasketControl : MonoBehaviour
             if (cm != null)
             {
                 curScore += cm.cupcakeScore;
+                if (cm.GetHealer())
+                    GameObject.FindObjectOfType<LifeController>().GetHealed();
                 cupcakeManager.DestroyCupcake(collision.gameObject);
                 GameObject.Find("Score").GetComponent<Text>().text = curScore.ToString();
             }

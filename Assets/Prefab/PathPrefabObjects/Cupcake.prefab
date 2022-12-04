@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7385829241601451599}
   - component: {fileID: 2816709177237628943}
   - component: {fileID: -7924096430938421657}
+  - component: {fileID: 3105413785026465041}
   m_Layer: 9
   m_Name: Cupcake
   m_TagString: Cupcake
@@ -48,10 +49,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cupcakeScore: 10
   cupcakeSprites:
-  - {fileID: 3698028317399831782, guid: 49b82a60a615b5a4cb91effcde109699, type: 3}
-  - {fileID: -3210149256749087235, guid: 49b82a60a615b5a4cb91effcde109699, type: 3}
-  - {fileID: -7280360292507975879, guid: 49b82a60a615b5a4cb91effcde109699, type: 3}
-  - {fileID: -5298874578078061209, guid: 49b82a60a615b5a4cb91effcde109699, type: 3}
+  - {fileID: 8149024043479713565, guid: a55574ef1fea8fc4ba05546c7c306a07, type: 3}
+  - {fileID: -7412287663024649185, guid: a55574ef1fea8fc4ba05546c7c306a07, type: 3}
+  - {fileID: -5177929013629197416, guid: a55574ef1fea8fc4ba05546c7c306a07, type: 3}
+  - {fileID: -6508656534201667374, guid: a55574ef1fea8fc4ba05546c7c306a07, type: 3}
 --- !u!50 &7385829241601451599
 Rigidbody2D:
   serializedVersion: 4
@@ -150,3 +151,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3105413785026465041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6198484786188144205}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f6d3c6e4250e84192f5b34ce9e71bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowColor: {r: 0.25527963, g: 0.764151, b: 0, a: 1}
+  glowBrightness: 3.05
+  outlineWidth: 2
+  alphaThreshold: 0.219
+  drawOutside: 0
+  enableInstancing: 0
