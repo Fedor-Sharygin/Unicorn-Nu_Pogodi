@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     private float seconds = 0;
     private int minutes = 0;
-    private Text time;
+    private TMPro.TextMeshProUGUI time;
 
 
     public bool gameEnd = false;
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         }
         bc.MyStart();
         dmgr.MyStart();
-        time = GameObject.Find("Time").GetComponent<Text>();
+        time = GameObject.Find("Time").GetComponent<TMPro.TextMeshProUGUI>();
         time.text = "00:00";
     }
 

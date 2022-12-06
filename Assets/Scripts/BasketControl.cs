@@ -26,6 +26,7 @@ public class BasketControl : MonoBehaviour
     //private FaceBasket playerControl;
     private PlayerAnimation playerAnim;
 
+    private TMPro.TextMeshProUGUI score;
 
     // Start is called before the first frame update
     public void MyStart()
@@ -35,7 +36,8 @@ public class BasketControl : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
         GameObject[] touchAreas = GameObject.FindGameObjectsWithTag("TouchArea");
 
-        GameObject.Find("Score").GetComponent<Text>().text = "0";
+        score = GameObject.Find("Score").GetComponent<TMPro.TextMeshProUGUI>();
+        score.text = "0";
         playerAnim = GameObject.FindObjectOfType<PlayerAnimation>();
     }
 
@@ -140,7 +142,7 @@ public class BasketControl : MonoBehaviour
                 if (cm.GetHealer())
                     GameObject.FindObjectOfType<LifeController>().GetHealed();
                 cupcakeManager.DestroyCupcake(collision.gameObject);
-                GameObject.Find("Score").GetComponent<Text>().text = curScore.ToString();
+                score.text = curScore.ToString();
             }
         }
     }
