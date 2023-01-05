@@ -1,0 +1,3 @@
+Font: BasicPixel made by Alex Scarf (me) via http://www.pentacom.jp/pentacom/bitfontmaker2/
+      TextMesh Pro available in Unity
+Sprites: made by Alex Scarf (me) via Piskel app https://www.piskelapp.com
