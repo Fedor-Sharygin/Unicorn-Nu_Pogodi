@@ -26,11 +26,14 @@ public class CupcakeMovement : MonoBehaviour
 
     private bool healer = false;
 
+    private AudioPlayer audioPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
         int randIdx = Random.Range(0, cupcakeSprites.Count);
         GetComponent<SpriteRenderer>().sprite = cupcakeSprites[randIdx];
+        audioPlayer = FindObjectOfType<AudioPlayer>();
     }
 
     // Update is called once per frame
@@ -150,6 +153,18 @@ public class CupcakeMovement : MonoBehaviour
     public void Activate()
     {
         move = true;
+    }
+
+
+    private void OnDestroy()
+    {
+        int sfxIdx = 0;
+        if (healer) sfxIdx = 1;
+        if (transform.position.y <= -6) sfxIdx = 2;
+    
+        /// check for level reset
+        if (audioPlayer != null)
+            audioPlayer.PlaySound(sfxIdx);
     }
 
 }
