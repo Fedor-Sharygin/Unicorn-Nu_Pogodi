@@ -33,4 +33,9 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
+    public void SetPitch(float pitchLevel)
+    {
+        gameObject.GetComponent<AudioSource>().pitch = pitchLevel;
+    }
+
 }

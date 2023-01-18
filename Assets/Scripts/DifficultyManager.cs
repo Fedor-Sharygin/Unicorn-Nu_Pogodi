@@ -1,70 +1,57 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class DifficultyManager : MonoBehaviour
 {
+
+    [System.Serializable]
+    private class DifficultyParameters
+    {
+        public float timeStart;
+        public float spawnDelayMin, spawnDelayMax;
+        public float travelVctyMin, travelVctyMax;
+        public float travelTimeMin, travelTimeMax;
+        public float spawnHealProb;
+
+        public float themePitch;
+    }
+
     private CupcakeManager cmgr;
     private int diffLvl = 0, prvLvl = 0;
+    /// <int, Tuple<Tuple<int, int>, Tuple<int, int>, Tuple<int, int>, int>>
+    [SerializeField] List<DifficultyParameters> timeDifficulty;
 
     public void MyStart()
     {
         cmgr = GameObject.FindObjectOfType<CupcakeManager>();
-        UpdateSpawners(2.5f, 6.3f,
-                       .05f, .15f,
-                       7.5f, 10f,
-                       .7f);
+        UpdateSpawners();
     }
 
 
-    private void UpdateSpawners(
-        float n_minDelay, float n_maxDelay,
-        float n_minVel, float n_maxVel,
-        float n_minTrvl, float n_maxTrvl,
-        float n_healProb
-        )
+    private void UpdateSpawners()
     {
-        cmgr.SetDelayRange(n_minDelay, n_maxDelay);
-        cmgr.SetVelocityRange(n_minVel, n_maxVel);
-        cmgr.SetTravelTimeRange(n_minTrvl, n_maxTrvl);
-        cmgr.SetHealCupcakeProb(n_healProb);
+        DifficultyParameters diffParams = timeDifficulty[prvLvl];
+
+        cmgr.SetDelayRange      (diffParams.spawnDelayMin, diffParams.spawnDelayMax);
+        cmgr.SetVelocityRange   (diffParams.travelVctyMin, diffParams.travelVctyMax);
+        cmgr.SetTravelTimeRange (diffParams.travelTimeMin, diffParams.travelTimeMax);
+        cmgr.SetHealCupcakeProb (diffParams.spawnHealProb);
+
+        GameObject.FindObjectOfType<MusicPlayer>().SetPitch(diffParams.themePitch);
     }
+
 
     void Update()
     {
         float curLevelTime = Time.timeSinceLevelLoad;
 
         prvLvl = diffLvl;
-        if (prvLvl < 3 && curLevelTime >= 300f)
-            ++diffLvl;
-        else if (prvLvl < 2 && curLevelTime >= 150f)
-            ++diffLvl;
-        else if (prvLvl < 1 && curLevelTime >= 60f)
+        if (prvLvl < timeDifficulty.Capacity && curLevelTime >= timeDifficulty[prvLvl].timeStart)
             ++diffLvl;
 
         if (prvLvl != diffLvl)
-        {
-            if (diffLvl == 1)
-            {
-                UpdateSpawners(1.2f, 3.4f,
-                               .11f, .22f,
-                               6.5f, 8f,
-                               .51f);
-            }
-            else if (diffLvl == 2)
-            {
-                UpdateSpawners(.7f, 2f,
-                               .19f, .4f,
-                               4.2f, 6.5f,
-                               .4f);
-            }
-            else
-            {
-                UpdateSpawners(.2f, 1.2f,
-                               .35f, .7f,
-                               2.4f, 4f,
-                               .24f);
-            }
-        }
+            UpdateSpawners();
     }
 }
