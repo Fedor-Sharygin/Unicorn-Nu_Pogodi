@@ -5,13 +5,23 @@ using UnityEngine;
 public class AudioPlayer : MonoBehaviour
 {
 
+    static AudioPlayer instance = null;
     private AudioSource aSrc;
     [SerializeField] List<AudioClip> sfx;
 
 
-    private void Start()
+    private void Awake()
     {
-        aSrc = GetComponent<AudioSource>();
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+            aSrc = GetComponent<AudioSource>();
+        }
     }
 
     public void PlaySound(int sfxIdx)
