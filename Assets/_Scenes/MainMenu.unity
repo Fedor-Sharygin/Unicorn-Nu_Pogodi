@@ -2705,6 +2705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelButtonPrefab: {fileID: 7664062318673589865, guid: 60d7c5f350cae9743bae3ee8e6f3e95b, type: 3}
   levelButtonContainer: {fileID: 206083892}
+  levelHighScore: {fileID: 0}
 --- !u!4 &1317098087
 Transform:
   m_ObjectHideFlags: 0

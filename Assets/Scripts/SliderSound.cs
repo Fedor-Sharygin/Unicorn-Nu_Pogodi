@@ -10,8 +10,6 @@ public class SliderSound : MonoBehaviour, IPointerUpHandler
     [SerializeField] private AudioSource sfx;
     [SerializeField] private AudioClip snd;
     [SerializeField] private Slider slider;
-
-
     public void OnPointerUp(PointerEventData eventData)
     {
         sfx.PlayOneShot(snd);

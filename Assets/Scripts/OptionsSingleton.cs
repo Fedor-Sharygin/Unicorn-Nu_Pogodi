@@ -26,18 +26,20 @@ public class OptionsSingleton : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this.gameObject);
 
-            themeSlider.value = 1f;
-            themeSource.volume = 1;
+            themeSlider.value = PlayerPrefs.GetFloat("musicVolume", .5f);
+            themeSource.volume = themeSlider.value;
             themeSlider.onValueChanged.AddListener((val) =>
             {
                 themeSource.volume = themeSlider.value;
+                PlayerPrefs.SetFloat("musicVolume", themeSlider.value);
             });
 
-            sfxSlider.value = 1f;
-            sfxSource.volume = 1;
+            sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume", .5f);
+            sfxSource.volume = sfxSlider.value;
             sfxSlider.onValueChanged.AddListener((val) =>
             {
                 sfxSource.volume = sfxSlider.value;
+                PlayerPrefs.SetFloat("sfxVolume", sfxSlider.value);
             });
         }
     }
