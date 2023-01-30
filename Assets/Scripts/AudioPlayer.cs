@@ -29,4 +29,9 @@ public class AudioPlayer : MonoBehaviour
         aSrc.PlayOneShot(sfx[sfxIdx]);
     }
 
+    private void OnDestroy()
+    {
+        Debug.Log("Destroyed AudioPlayer");
+    }
+
 }

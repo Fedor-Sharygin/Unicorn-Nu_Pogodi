@@ -22,6 +22,7 @@ public class MenuCommands : MonoBehaviour
 
     public void Quit()
     {
+        GameObject.FindObjectOfType<XML_HighScoreParser>().SaveScores();
         Application.Quit();
     }
 
@@ -34,6 +35,11 @@ public class MenuCommands : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+
+        GameObject.FindObjectOfType<XML_HighScoreParser>().InputScore(SceneManager.GetActiveScene().name, GameObject.FindObjectOfType<BasketControl>().curScore);
+
+        MainMenuSingleton mMenu = GameObject.FindObjectOfType<MainMenuSingleton>(true);
+        mMenu.gameObject.SetActive(true);
     }
 
 }

@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BasketControl : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class BasketControl : MonoBehaviour
 
     private CupcakeManager cupcakeManager;
 
-    private int curScore = 0;
+    public int curScore = 0;
 
     private GameManager gameManager;
     private Vector2 startPos;

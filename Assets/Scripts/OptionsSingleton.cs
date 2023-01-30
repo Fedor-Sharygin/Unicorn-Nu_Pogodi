@@ -24,6 +24,7 @@ public class OptionsSingleton : MonoBehaviour
         else
         {
             instance = this;
+            this.gameObject.SetActive(false);
             DontDestroyOnLoad(this.gameObject);
 
             themeSlider.value = PlayerPrefs.GetFloat("musicVolume", .5f);

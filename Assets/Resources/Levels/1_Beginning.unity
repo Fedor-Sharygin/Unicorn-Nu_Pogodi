@@ -1353,6 +1353,10 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 811854719}
+    - target: {fileID: 711073651702973172, guid: 10b1868a12a27254b9c2f956402384b5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 115.70001
+      objectReference: {fileID: 0}
     - target: {fileID: 711073652152476742, guid: 10b1868a12a27254b9c2f956402384b5, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -1365,6 +1369,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 711073652354197960, guid: 10b1868a12a27254b9c2f956402384b5, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 711073652354197960, guid: 10b1868a12a27254b9c2f956402384b5, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -2035,6 +2043,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 5506408655298800193, guid: 6dc02d9dd403b9840bdf2606f3bcfedc, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5506408655298800316, guid: 6dc02d9dd403b9840bdf2606f3bcfedc, type: 3}
       propertyPath: m_Name
       value: PauseMenu

@@ -38,4 +38,10 @@ public class MusicPlayer : MonoBehaviour
         gameObject.GetComponent<AudioSource>().pitch = pitchLevel;
     }
 
+    private void OnDestroy()
+    {
+        Debug.Log("Destroyed MusicPlayer");
+    }
+
+
 }
