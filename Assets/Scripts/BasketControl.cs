@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -12,9 +13,17 @@ public class BasketControl : MonoBehaviour
     private float curPosTime = 0.0f;
 
 
-    [SerializeField]  private List<BoxCollider2D> m_TouchBoxes;
-    [SerializeField]  private List<Transform> m_CatchPositions;
-    [SerializeField]  private List<int> m_AnimationIndex;
+    [Serializable]
+    public class CatchValue
+    {
+        public BoxCollider2D touchBox;
+        public Transform catchPosition;
+        public int animationIndex;
+        public List<KeyCode> keyControl;
+        public GameObject keyStrokeTxt;
+        public DarkenAnimation darken;
+    }
+    [SerializeField] private List<CatchValue> m_CatchValues;
 
     private CupcakeManager cupcakeManager;
 
@@ -40,6 +49,11 @@ public class BasketControl : MonoBehaviour
         score = GameObject.Find("Score").GetComponent<TMPro.TextMeshProUGUI>();
         score.text = "0";
         playerAnim = GameObject.FindObjectOfType<PlayerAnimation>();
+
+        foreach (CatchValue cval in m_CatchValues)
+        {
+            cval.keyStrokeTxt.GetComponent<TextMeshProUGUI>().text = cval.keyControl[0].ToString();
+        }
     }
 
     // Update is called once per frame
@@ -71,14 +85,31 @@ public class BasketControl : MonoBehaviour
                 var mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 var realPos = new Vector2(mouseWorldPos.x, mouseWorldPos.y);
 
-                for (int i = 0; i < m_TouchBoxes.Count; ++i)
+                for (int i = 0; i < m_CatchValues.Count; ++i)
                 {
-                    if (m_TouchBoxes[i].OverlapPoint(realPos))
+                    if (m_CatchValues[i].touchBox.OverlapPoint(realPos))
                     {
-                        transform.position = m_CatchPositions[i].position;
+                        transform.position = m_CatchValues[i].catchPosition.position;
                         //playerControl.ChangeRotation(transform.position);
-                        playerAnim.ChangeAnimation(m_AnimationIndex[i]);
+                        playerAnim.ChangeAnimation(m_CatchValues[i].animationIndex);
                         break;
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < m_CatchValues.Count; ++i)
+                {
+                    foreach (KeyCode kc in m_CatchValues[i].keyControl)
+                    {
+                        if (Input.GetKeyDown(kc))
+                        {
+                            transform.position = m_CatchValues[i].catchPosition.position;
+                            m_CatchValues[i].darken.Animate();
+                            //playerControl.ChangeRotation(transform.position);
+                            playerAnim.ChangeAnimation(m_CatchValues[i].animationIndex);
+                            break;
+                        }
                     }
                 }
             }
@@ -105,14 +136,31 @@ public class BasketControl : MonoBehaviour
             var mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             var realPos = new Vector2(mouseWorldPos.x, mouseWorldPos.y);
 
-            for (int i = 0; i < m_TouchBoxes.Count; ++i)
+            for (int i = 0; i < m_CatchValues.Count; ++i)
             {
-                if (m_TouchBoxes[i].OverlapPoint(realPos))
+                if (m_CatchValues[i].touchBox.OverlapPoint(realPos))
                 {
-                    transform.position = m_CatchPositions[i].position;
+                    transform.position = m_CatchValues[i].catchPosition.position;
                     //playerControl.ChangeRotation(transform.position);
-                    playerAnim.ChangeAnimation(m_AnimationIndex[i]);
+                    playerAnim.ChangeAnimation(m_CatchValues[i].animationIndex);
                     break;
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < m_CatchValues.Count; ++i)
+            {
+                foreach (KeyCode kc in m_CatchValues[i].keyControl)
+                {
+                    if (Input.GetKeyDown(kc))
+                    {
+                        transform.position = m_CatchValues[i].catchPosition.position;
+                        m_CatchValues[i].darken.Animate();
+                        //playerControl.ChangeRotation(transform.position);
+                        playerAnim.ChangeAnimation(m_CatchValues[i].animationIndex);
+                        break;
+                    }
                 }
             }
         }

@@ -59,9 +59,9 @@ public class GameManager : MonoBehaviour
     void Lose()
     {
         /// the pause button in the gameplay menu prefab
-        GameObject.Find("GameplayMenu").transform.GetChild(0).gameObject.SetActive(false);
+        GameObject.Find("GameplayMenu").transform.GetChild(3).gameObject.SetActive(false);
 
         /// the death screen in the gameplay menu prefab
-        GameObject.Find("GameplayMenu").transform.GetChild(4).gameObject.SetActive(true);
+        GameObject.Find("GameplayMenu").transform.GetChild(5).gameObject.SetActive(true);
     }
 }
