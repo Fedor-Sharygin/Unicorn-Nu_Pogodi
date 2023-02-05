@@ -31,7 +31,7 @@ public class XML_HighScoreParser : MonoBehaviour
             if (!Directory.Exists(Application.persistentDataPath + "/Highscores/"))
             {
                 Directory.CreateDirectory(Application.persistentDataPath + "/Highscores/");
-                File.Create(Application.persistentDataPath + "/Highscores/highscores.xml");
+                //File.Create(Application.persistentDataPath + "/Highscores/highscores.xml");
             }
         }
     }

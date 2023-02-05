@@ -29,6 +29,7 @@ public class MusicPlayer : MonoBehaviour
             curScene = levelTag;
             asrc.Stop();
             asrc.clip = audioClip;
+            asrc.pitch = 1f;
             asrc.Play();
         }
     }

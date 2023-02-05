@@ -142,6 +142,7 @@ public class CupcakeMovement : MonoBehaviour
     public void SetHealer()
     {
         healer = true;
+        gameObject.GetComponent<ParticleSystem>().Play();
     }
 
     public bool GetHealer()
